@@ -6,8 +6,9 @@ var path = require('path');
 var nunjucks = require('nunjucks');
 
 //set template path to ./views
-app.set('views',path.join(__dirname,'views'));
-nunjucks.configure(path.join(__dirname,'views'),{
+var views_path = path.join(__dirname,'views');
+app.set('views',views_path);
+nunjucks.configure(views_path,{
     autoescape: true,
     cache: false,
     express: app
